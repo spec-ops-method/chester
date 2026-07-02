@@ -2,7 +2,7 @@
 
 > "If you don't see the use of it, I certainly won't let you clear it away. Go away and think. Then, when you can come back and tell me that you do see the use of it, I may allow you to destroy it." — G.K. Chesterton, *The Thing* (1929)
 
-![G.K. Chesterton](250px-Gilbert_Chesterton.jpg)
+![G.K. Chesterton](assets/250px-Gilbert_Chesterton.jpg)
 
 An [Agent Skill](https://agentskills.io/specification) that teaches AI coding tools to investigate before they remove. It applies the principle of Chesterton's Fence to the codebases where the principle is hardest to follow: mature systems where nobody remembers why the fence was built.
 
