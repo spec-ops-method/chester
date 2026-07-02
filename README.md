@@ -92,9 +92,17 @@ The skill triggers automatically on tasks involving legacy code, refactoring, mi
 ## Repository contents
 
 ```
-chester/
-└── SKILL.md              # the skill itself
-chester.skill             # packaged, installable version
+├── SKILL.md                # the skill itself
+├── chester.skill           # packaged version for Claude
+├── example/                # worked example showing the skill in action
+│   ├── README.md
+│   ├── billing_client_BEFORE.py
+│   ├── billing_client.py
+│   ├── test_billing_client.py
+│   └── FENCE_LEDGER.md
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+└── LICENSE
 ```
 
 ## Background
