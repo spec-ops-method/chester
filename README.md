@@ -4,7 +4,7 @@
 
 ![G.K. Chesterton](250px-Gilbert_Chesterton.jpg)
 
-An [Agent Skill](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) that teaches AI coding tools to investigate before they remove. It applies the principle of Chesterton's Fence to the codebases where the principle is hardest to follow: mature systems where nobody remembers why the fence was built.
+An [Agent Skill](https://agentskills.io/specification) that teaches AI coding tools to investigate before they remove. It applies the principle of Chesterton's Fence to the codebases where the principle is hardest to follow: mature systems where nobody remembers why the fence was built.
 
 ## The problem
 
