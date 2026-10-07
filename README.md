@@ -26,7 +26,7 @@ The skill also includes a calibration section so it can't be weaponized as a bla
 
 ## Installation
 
-Chester's guidance is written as a structured prompt that works with any AI coding agent. Choose the setup that matches your tool:
+Chester's guidance is written as a structured prompt that works with any AI coding agent. `SKILL.md` holds the core workflow and links to detailed guidance in `references/`. Tools that load skill directories pick these up automatically; for single-file setups below, concatenate them so nothing is lost. Choose the setup that matches your tool:
 
 ### Claude
 
@@ -36,17 +36,17 @@ Chester's guidance is written as a structured prompt that works with any AI codi
 
 ### GitHub Copilot
 
-Copy `SKILL.md` into your repository as a Copilot instructions file:
+Combine `SKILL.md` and its references into a Copilot instructions file:
 
 ```bash
-cp SKILL.md .github/copilot-instructions.md
+cat SKILL.md references/*.md > .github/copilot-instructions.md
 ```
 
 Or, to scope it as a reusable instruction file that you can reference on demand:
 
 ```bash
 mkdir -p .github/instructions
-cp SKILL.md .github/instructions/chester.instructions.md
+cat SKILL.md references/*.md > .github/instructions/chester.instructions.md
 ```
 
 Add the YAML front matter so Copilot knows when to apply it:
@@ -62,28 +62,28 @@ See [Customizing Copilot with instruction files](https://docs.github.com/en/copi
 
 ### Cursor
 
-Copy `SKILL.md` into your project as a Cursor rules file:
+Combine `SKILL.md` and its references into a Cursor rules file:
 
 ```bash
 mkdir -p .cursor/rules
-cp SKILL.md .cursor/rules/chester.mdc
+cat SKILL.md references/*.md > .cursor/rules/chester.mdc
 ```
 
 Cursor will automatically pick up rules from `.cursor/rules/`. See [Cursor Rules](https://docs.cursor.com/context/rules) for more options.
 
 ### OpenAI Codex
 
-Copy `SKILL.md` into your repository as the Codex system prompt:
+Combine `SKILL.md` and its references into your repository's Codex instructions:
 
 ```bash
-cp SKILL.md AGENTS.md
+cat SKILL.md references/*.md > AGENTS.md
 ```
 
 Codex reads `AGENTS.md` from the repository root automatically. See [Codex documentation](https://openai.com/index/introducing-codex/) for details.
 
 ### Other agents
 
-For any agent that supports custom system prompts or instruction files, paste the contents of `SKILL.md` into the appropriate configuration. The skill is plain Markdown with no tool-specific syntax.
+For any agent that supports custom system prompts or instruction files, paste the contents of `SKILL.md` and the files in `references/` into the appropriate configuration. The skill is plain Markdown with no tool-specific syntax.
 
 ### When does it activate?
 
@@ -92,7 +92,11 @@ The skill triggers automatically on tasks involving legacy code, refactoring, mi
 ## Repository contents
 
 ```
-├── SKILL.md                # the skill itself
+├── SKILL.md                # the skill itself (core workflow)
+├── references/             # detailed guidance loaded on demand
+│   ├── archaeology.md      # fence inventory and archaeology (steps 1–2)
+│   ├── acting.md           # acting, ledger template, sequencing (steps 3–5)
+│   └── calibration.md      # avoiding over-caution
 ├── chester.skill           # packaged version for Claude
 ├── example/                # worked example showing the skill in action
 │   ├── README.md

@@ -6,7 +6,7 @@ Thank you for your interest in improving Chester! This skill helps AI coding age
 
 ### Reporting issues
 
-If Chester's guidance led to a bad outcome — a fence it should have caught, a false alarm that wasted effort, or unclear instructions — [open an issue](../../issues/new) describing:
+If Chester's guidance led to a bad outcome — a fence it should have caught, a false alarm that wasted effort, or unclear instructions — [open an issue](https://github.com/spec-ops-method/chester/issues/new) describing:
 
 - The situation (what kind of code, what task)
 - What Chester directed the agent to do
